@@ -1,19 +1,36 @@
- 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Raleway:wght@500&family=Readex+Pro:wght@200&family=Reem+Kufi:wght@600&family=Source+Serif+4:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Open+Sans:wght@700&family=Raleway:wght@500&family=Readex+Pro:wght@200&family=Reem+Kufi:wght@600&family=Source+Serif+4:wght@200;400&display=swap');
 .login-card{
 /* border: solid 1px black; */
 box-shadow: 0px 0px 10px 0px rgb(81, 102, 102);
 border-radius: 5px 5px 5px 5px;
+ 
 }
 .login-text1{
     font-size: 30px;
     font-weight: 470;
+    font-family: 'Raleway', sans-serif;
     
+}
+.pdf{
+    display: inline-flex;
+    display: flex;
+    justify-content: center;
+ 
+}
+.pdf-img{
+    height:100%;
+    width: 50%;
+ 
+
+ 
 }
 
 .login-text2{
     font-size: 20px;
     font-weight: 570;
     text-transform: uppercase;
+    font-family: 'Source Serif 4', sans-serif;
     
 }
 input{
@@ -24,20 +41,20 @@ input{
     color: rgb(201, 216, 229);
     font-size: 19px;
     font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
 }
 .btn:hover{
    transition: 1s;
    background-color: rgb(19, 60, 96);
- 
+   font-family: 'Raleway', sans-serif;
    color: aliceblue;
    
 }
 .link-admin{
     text-decoration: none;
     display: flex;
+    color: red;
  
 }
-.admin-text{
-    color: red;
-}
+ 
  
