@@ -1,0 +1,43 @@
+ 
+.login-card{
+/* border: solid 1px black; */
+box-shadow: 0px 0px 10px 0px rgb(81, 102, 102);
+border-radius: 5px 5px 5px 5px;
+}
+.login-text1{
+    font-size: 30px;
+    font-weight: 470;
+    
+}
+
+.login-text2{
+    font-size: 20px;
+    font-weight: 570;
+    text-transform: uppercase;
+    
+}
+input{
+    display: inline-block;
+}
+.btn{
+    background-color: rgb(67, 119, 164);
+    color: rgb(201, 216, 229);
+    font-size: 19px;
+    font-weight: 600;
+}
+.btn:hover{
+   transition: 1s;
+   background-color: rgb(19, 60, 96);
+ 
+   color: aliceblue;
+   
+}
+.link-admin{
+    text-decoration: none;
+    display: flex;
+ 
+}
+.admin-text{
+    color: red;
+}
+ 
