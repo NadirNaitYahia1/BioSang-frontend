@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Raleway:wght@500&family=Readex+Pro:wght@200&family=Reem+Kufi:wght@600&family=Source+Serif+4:wght@200;400&display=swap');
+
+.apropos{
+    background-color: #f1f7fd;
+}
+.apropos-text1{
+    font-size: 28px;
+    font-weight: 700;
+    color: #2c4964;
+    font-family: "Raleway", sans-serif;
+} 
+
+.apropos-text2{
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}

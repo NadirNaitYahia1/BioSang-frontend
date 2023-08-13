@@ -1,0 +1,45 @@
+.questions-liste{
+    background-color: #f1f7fd;
+    display: flex;
+}
+.bttn{
+     background-color:  transparent;
+     border: 0;
+}
+.qst-text1{
+    font-size: 28px;
+    font-weight: 700;
+    color: #2c4964;
+    font-family: "Raleway", sans-serif;
+} 
+
+.qst-text2{
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+.qst-text2:hover{
+color: #1389d3;
+}
+.qst-text2-clicked{
+    color: #1389d3;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    }
+.img-down{
+    width: 20px;
+    height: 20px;
+ 
+}
+.img-class{ 
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* border:solid 1px #641616; */
+}

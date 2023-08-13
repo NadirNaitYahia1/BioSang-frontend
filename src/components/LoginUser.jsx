@@ -5,7 +5,7 @@ import admin from '../assets/admin.png'
 import pdf from '../assets/pdf.png'
 import { Link } from 'react-router-dom';
 
-const Login = () => {
+const LoginAdmin = () => {
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent the default form submission behavior
     // Handle your form submission logic here
@@ -13,7 +13,7 @@ const Login = () => {
 
   return (
     <div className="container ">
-      <div className="row col-12 mt-1 ">
+      <div className="row col-12  ">
 
 
         <div className="text mt-3 d-flex justify-content-center">
@@ -75,4 +75,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginAdmin;

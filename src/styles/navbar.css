@@ -1,7 +1,9 @@
 .navbar{
-    background-color: #dbdddd ;
+    /* background-color: #dbdddd ; */
+    background-color: #fff;
     /* border-bottom: ; */
-    box-shadow: 0px 3px 8px rgba(0, 0, 0, 25%);
+    /* box-shadow: 0px 3px 8px rgba(0, 0, 0, 25%); */
+    box-shadow: 0px 2px 15px rgb(166, 203, 236);
     position: sticky;
     top: 0px;
     width: 100%;  
@@ -19,9 +21,10 @@ p.logo{
  
 .p-clicked {
   border-bottom:  3px   #446e93 solid;
-    /* color: #4d7598; */
-   
+    /* color: #4d7598; */ 
 }
+ 
+ 
 li  {
   text-transform: capitalize;
   font-size: 18px;

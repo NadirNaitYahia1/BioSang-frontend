@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route,useLocation  } from "react-route
 import Navbar from './components/Navbar'
  import Home from './pages/Home'
 import './App.css'
+import LoginAdmin from './components/LoginAdmin';
  
  const App = () => {
    return ( 
@@ -13,6 +14,7 @@ import './App.css'
         <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/admin" element={<LoginAdmin />} />
       
           </Routes>
       </Router>
