@@ -1,18 +1,114 @@
-import React from 'react'
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import profile from '../assets/profile.png'
+import profil from '../assets/profil.png';
+import '../styles/LogedPatient.css';
+import download from '../assets/download.png';
+import print from '../assets/print.png';
 
 const LogedPatient = () => {
   return (
-   <div className="container-fluid">
-    <div className="row col-12">
-        <div className=" d-flex justify-content-end mt-3">
-             <h5>Nadir Nait Yahia</h5>
-             <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" className=""/>
-        </div>
-    </div>
-   </div>
-  )
-}
+    <div className="container-fluid  align-items-center logedPatient mt-4 ">
+      <div className="row col-12 justify-content-center ">
+            <p className='apropos-text1 text-center mt-1 mb-4'>Vos Resultats</p>
+        <div className="col-9 LogedPatient-container d-flex">
+          <table >
+            <tr className='table-text1'>
+              <td >Nom du fichier</td>
+              <td>Date</td>
+              <td>Heure</td>
+              <td>Téléchargement</td>
+            </tr>
+ 
+            <tr  className='table-text2 tr-notReaded'>
+                <td> Analyse de sang </td>
+                <td>31/07/2023</td>
+                <td>01:00</td>
+                <td className='d-flex justify-content-center'>
+                    <button className='btn col-3 mx-1'> 
+                      <img src={download} alt="download" className="img-download" />
+                    </button>
 
-export default LogedPatient
+                    <button className='btn col-3'> 
+                    <img src={print} alt="download" className="img-download" />
+                    </button>
+
+        
+                </td>
+            </tr>   
+
+            <tr >
+                <td> Analyse de sang g2</td>
+                <td>31/07/2023</td>
+                <td>01:00</td> 
+                                <td className='d-flex justify-content-center'>
+                    <button className='btn col-3 mx-1'> 
+                      <img src={download} alt="download" className="img-download" />
+                    </button>
+
+                    <button className='btn col-3'> 
+                    <img src={print} alt="download" className="img-download" />
+                    </button>
+
+             
+                </td>
+            </tr>   
+
+            <tr >
+                <td> Analyse de sang g2</td>
+                <td>31/07/2023</td>
+                <td>01:00</td> 
+                                <td className='d-flex justify-content-center'>
+                    <button className='btn col-3 mx-1'> 
+                      <img src={download} alt="download" className="img-download" />
+                    </button>
+
+                    <button className='btn col-3'> 
+                    <img src={print} alt="download" className="img-download" />
+                    </button>
+              
+                </td>
+            </tr> 
+
+            <tr >
+                <td> Analyse de sang g2</td>
+                <td>31/07/2023</td>
+                <td>01:00</td> 
+                                <td className='d-flex justify-content-center'>
+                    <button className='btn col-3 mx-1'> 
+                      <img src={download} alt="download" className="img-download" />
+                    </button>
+
+                    <button className='btn col-3'> 
+                    <img src={print} alt="download" className="img-download" />
+                    </button>
+              
+                </td>
+            </tr> 
+
+            <tr >
+                <td> Analyse de sang g2</td>
+                <td>31/07/2023</td>
+                <td>01:00</td> 
+                                <td className='d-flex justify-content-center'>
+                    <button className='btn col-3 mx-1'> 
+                      <img src={download} alt="download" className="img-download" />
+                    </button>
+
+                    <button className='btn col-3'> 
+                    <img src={print} alt="download" className="img-download" />
+                    </button>
+
+         
+                </td>
+            </tr>   
+ 
+  
+
+          </table>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default LogedPatient;

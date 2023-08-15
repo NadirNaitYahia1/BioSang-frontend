@@ -5,8 +5,7 @@ import Navbar from './components/Navbar'
  import Home from './pages/Home'
 import './App.css'
 import LoginAdmin from './components/LoginAdmin';
-import LogedPatient from './components/LogedPatient';
- 
+import LogedUser from './pages/LogedUser'; 
  const App = () => {
    return ( 
   <>
@@ -16,7 +15,7 @@ import LogedPatient from './components/LogedPatient';
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/admin" element={<LoginAdmin />} />
-            <Route path="/logedPatient" element={<LogedPatient />} />
+            <Route path="/logedPatient" element={<LogedUser />} />
       
           </Routes>
       </Router>
