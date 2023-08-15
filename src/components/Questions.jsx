@@ -19,7 +19,7 @@ const Questions = () => {
   return (
     <div className="container">
       <div className="row justify-content-center mt-5 mb-5">
-        <p className='qst-text1 text-center'>Vos Question</p>
+        <p className='qst-text1 text-center'>Vos Questions</p>
 
         <div className="col-md-8 d-flex align-items-center questions-liste mt-3">
           <img src={question} alt="" />
@@ -35,7 +35,7 @@ const Questions = () => {
         <div className="col-md-8 d-flex align-items-center questions-liste mt-3">
           <img src={question} alt="" />
           <button className='bttn d-flex ' onClick={() => toggleItem(2)}>
-            <p className='ms-3 qst-text2'>Faut-il prendre RDV pour une prise de sang ?</p>
+         <p className={(openItem === 2) ? 'ms-3 qst-text2-clicked':'ms-3 qst-text2'}>Faut-il prendre RDV pour une prise de sang ?</p>
                { (openItem === 2) ? <img src={up}  className=' img-down ms-5'/>  : <img src={down} className=' img-down ms-5' /> }
           </button>
         </div>
@@ -47,7 +47,7 @@ const Questions = () => {
         <div className="col-md-8 d-flex align-items-center questions-liste mt-3">
           <img src={question} alt="" />
           <button className='bttn d-flex ' onClick={() => toggleItem(3)}>
-            <p className='ms-3 qst-text2'>Quel prise de sang pour un bilan complet ? </p>
+         <p className={(openItem === 3) ? 'ms-3 qst-text2-clicked':'ms-3 qst-text2'}>Quel prise de sang pour un bilan complet ? </p>
                { (openItem === 3) ? <img src={up}  className=' img-down ms-5'/>  : <img src={down} className=' img-down ms-5' /> }
           </button>
         </div>
@@ -58,7 +58,7 @@ const Questions = () => {
         <div className="col-md-8 d-flex align-items-center questions-liste mt-3">
           <img src={question} alt="" />
           <button className='bttn d-flex ' onClick={() => toggleItem(4)}>
-            <p className='ms-3 qst-text2'>Quel délai pour résultat prise de sang ?</p>
+         <p className={(openItem === 4) ? 'ms-3 qst-text2-clicked':'ms-3 qst-text2'}>Quel délai pour résultat prise de sang ?</p>
                { (openItem === 4) ? <img src={up}  className=' img-down ms-5'/>  : <img src={down} className=' img-down ms-5' /> }
           </button>
         </div>
@@ -70,7 +70,7 @@ const Questions = () => {
         <div className="col-md-8 d-flex align-items-center questions-liste mt-3">
           <img src={question} alt="" />
           <button className='bttn d-flex ' onClick={() => toggleItem(5)}>
-            <p className='ms-3 qst-text2'>Est-ce qu'on peut faire une prise de sang sans ordonnance ?</p>
+         <p className={(openItem === 5) ? 'ms-3 qst-text2-clicked':'ms-3 qst-text2'}>Est-ce qu'on peut faire une prise de sang sans ordonnance ?</p>
                { (openItem === 5) ? <img src={up}  className=' img-down ms-5'/>  : <img src={down} className=' img-down ms-5' /> }
           </button>
         </div>

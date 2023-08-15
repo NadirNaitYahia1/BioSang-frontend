@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
  import Home from './pages/Home'
 import './App.css'
 import LoginAdmin from './components/LoginAdmin';
+import LogedPatient from './components/LogedPatient';
  
  const App = () => {
    return ( 
@@ -15,6 +16,7 @@ import LoginAdmin from './components/LoginAdmin';
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/admin" element={<LoginAdmin />} />
+            <Route path="/logedPatient" element={<LogedPatient />} />
       
           </Routes>
       </Router>

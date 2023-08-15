@@ -8,7 +8,7 @@ const Apropos = () => {
  <div className='container-fluid mt-5 apropos'>
     <div className="row">
         <div className="col-12 text-center">
-          <p className='apropos-text1'>Le laboratoire d'analyses médicales BioSang </p>
+          <p className='apropos-text1 mt-3'>Le laboratoire d'analyses médicales BioSang </p>
           <p className='apropos-text2'>Nous sommes situés en plein centre-ville de ........
               , notre adresse est le ........ . La justesse du résultat des examens pratiqués engage la santé de chaque 
               patient par conséquent, nous métant à votre service une équipe de technicien spécialiste en biologie, microbiologie et
