@@ -6,6 +6,8 @@ import Navbar from './components/Navbar'
 import './App.css'
 import LoginAdmin from './components/LoginAdmin';
 import LogedUser from './pages/LogedUser'; 
+import LogedAdmin from './components/LogedAdmin';
+import AddPatient from './components/AddPatient'; 
  const App = () => {
    return ( 
   <>
@@ -16,6 +18,9 @@ import LogedUser from './pages/LogedUser';
             <Route path="/" element={<Home />} />
             <Route path="/admin" element={<LoginAdmin />} />
             <Route path="/logedPatient" element={<LogedUser />} />
+            <Route path="/logedAdmin" element={<LogedAdmin />} />
+            <Route path="/addPatient" element={<AddPatient />} />
+
       
           </Routes>
       </Router>
