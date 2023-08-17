@@ -4,8 +4,10 @@ import profil from '../assets/profil.png';
 import '../styles/LogedPatient.css';
 import download from '../assets/download.png';
 import print from '../assets/print.png';
-
 const LogedPatient = () => {
+
+
+
   return (
     <div className="container-fluid  align-items-center logedPatient mt-4 ">
       <div className="row col-12 justify-content-center ">

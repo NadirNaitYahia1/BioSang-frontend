@@ -4,13 +4,40 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import admin from '../assets/admin.png'
 import pdf from '../assets/pdf.png'
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const LoginAdmin = () => {
-  const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent the default form submission behavior
-    // Handle your form submission logic here
+  const [data, setData] = useState({
+    id_Patient: '',
+    password: '',
+  });
+
+  const createNote = async () => {
+    try {
+      const response = await fetch(`http://localhost:8000/api/login/user`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      console.log('Response:', response);
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    createNote(); // Call the API request function
+  };
+
+  const handleChange = (e) => {
+    setData({ ...data, [e.target.id]: e.target.value });
+  }
+ 
+  
+  
   return (
     <div className="container ">
       <div className="row col-12  ">
@@ -36,8 +63,11 @@ const LoginAdmin = () => {
                 <input
                   type="text"
                   className=" form-control form-control-lg "
-                  id="exampleInputEmail1"
-       
+                  id="id_Patient"
+         
+                  value={data.id_Patient}
+                  onChange={handleChange}
+    
                   placeholder="Id Patient"
                 />
 
@@ -45,15 +75,17 @@ const LoginAdmin = () => {
                 <input
                   type="text"
                   className=" form-control form-control-lg"
-                  id="exampleInputEmail1"
-      
+                  id="password"
                   placeholder="********"
+                  value={data.password}
+                  onChange={handleChange}
+       
                 />
               <div>
 
          
                   
-              <button type="submit" className="submit btn col-10  d-flex mx-auto mt-3    ">
+              <button type="submit" className="submit btn col-10  d-flex mx-auto mt-3    " onClick={handleChange}>
                 <p className='mx-auto'>Télecharger vos résultats</p>
               </button>
              
