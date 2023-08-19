@@ -1,12 +1,40 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import profil from '../assets/profil.png';
 import '../styles/LogedPatient.css';
 import download from '../assets/download.png';
 import print from '../assets/print.png';
+import { useState } from 'react';
 const LogedPatient = () => {
+  
+  
+  const [data, setData] = useState([]);
+
+ 
+
+  const getAnalyses = async () => {
+    try {
+        const response = await fetch('http://localhost:8000/api/getAnalyses');
+        let data = await response.json();
+        console.log("data", data);
+        setData(data);
+        console.log(data);
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+
+  
+    useEffect(() => {
+      getAnalyses();
+    }, []);
+  
 
 
+
+
+
+ 
 
   return (
     <div className="container-fluid  align-items-center logedPatient mt-4 ">
