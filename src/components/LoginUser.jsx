@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/login.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import admin from '../assets/admin.png'
-import pdf from '../assets/pdf.png'
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import admin from '../assets/admin.png';
+import pdf from '../assets/pdf.png';
+import { Link, useNavigate } from 'react-router-dom';
 
-const LoginAdmin = () => {
+const LoginUser = () => {
+  const [isAuth, setIsAuth] = useState(false);
   const [data, setData] = useState({
     id_Patient: '',
-    password: '',
+    password: ''
   });
+  const history = useNavigate(); // Initialize the history object
 
   const createNote = async () => {
     try {
@@ -20,11 +21,19 @@ const LoginAdmin = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
-        // credentials: 'include',
       });
-      console.log('Response:', response);
+      
+      const content = await response.json();
+      if (content.jwt !== undefined || content.jwt !== null){
+        localStorage.setItem('token', content.jwt);
+        setIsAuth(true);
+      }
+      else{
+        setIsAuth(false);
+      }
+      
     } catch (error) {
-      console.error('Error:', error);
+      console.log(error.message);
     }
   };
 
@@ -35,11 +44,14 @@ const LoginAdmin = () => {
 
   const handleChange = (e) => {
     setData({ ...data, [e.target.id]: e.target.value });
-  }
- 
-  
-  
-  return (
+  };
+
+  useEffect(() => {
+    if (isAuth === true) {
+      history("/login/user"); // Programmatically navigate to the desired route
+    }
+  }, [isAuth]);
+   return (
     <div className="container ">
       <div className="row col-12  ">
 
@@ -111,4 +123,4 @@ const LoginAdmin = () => {
   );
 };
 
-export default LoginAdmin;
+export default LoginUser;
