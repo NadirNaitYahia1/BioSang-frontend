@@ -9,7 +9,7 @@ import LogedUser from './pages/LogedUser';
 import LogedAdmin from './components/LogedAdmin';
 import AddPatient from './components/AddPatient';
 import PrivateRoutes from './utils/PrivateRotes';
-import NavbarPage from './components/NavbarPage';
+
 
 const App = () => {
  
