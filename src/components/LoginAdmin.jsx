@@ -5,7 +5,7 @@ import admin from '../assets/admin.png';
 import pdf from '../assets/pdf.png';
 import { Link } from 'react-router-dom';
 
-const LoginAdmin = () => {
+const LoginAdmin = ({mobileSize,click,setClick}) => {
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent the default form submission behavior
     // Handle your form submission logic here
@@ -15,15 +15,15 @@ const LoginAdmin = () => {
     <div className="container admin-page  ">
       <div className="row  col-12  ">
 
-        <div className="login-card  login-card-admin col-12  d-flex  mx-auto  ">
+        <div className={mobileSize ?"login-card  login-card-admin col-12  ":"login-card  login-card-admin col-12  d-flex  mx-auto "}>
 
         <div className="   col-md-4 col-12 d-flex align-items-center ">
         <p className='login-text1 mt-2 text-center '>Espace pour les administrateurs:</p>
           </div>
 
-          <div className="login-parts col-md-8 col-12 ms-4  ">
+          <div className={mobileSize?"login-parts col-md-8 col-12 ":"login-parts col-md-8 col-12 ms-4 "}>
   
-            <form onSubmit={handleSubmit} className='col-6  mx-auto '>
+            <form onSubmit={handleSubmit} className='col-6  mx-auto mt-4'>
               <label htmlFor="exampleInputEmail1"><p className='login-text2'>UTILISATEUR</p></label>
               <input
                 type="text"
@@ -41,10 +41,9 @@ const LoginAdmin = () => {
               />
 
               <div>
-                <button type="submit" className="submit btn col-10 d-flex mx-auto mt-3 mb-4">
-                  <p className='mx-auto'>Se Connecter</p>
-                </button>
+                <button type="button" class="btn btn-primary my-3 d-flex mx-auto">Se Connecter</button>
               </div>
+               
             </form>
           </div>
         </div>

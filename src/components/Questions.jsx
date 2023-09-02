@@ -23,9 +23,9 @@ const Questions = () => {
 
         <div className="col-md-8 d-flex align-items-center questions-liste mt-3">
           <img src={question} alt="" />
-          <button className='bttn d-flex ' onClick={() => toggleItem(1)}>
+          <button className='bttn  ' onClick={() => toggleItem(1)}>
             <p className={(openItem === 1) ? 'ms-3 qst-text2-clicked':'ms-3 qst-text2'}>Faut-il prendre RDV pour une prise de sang ?</p>
-          { (openItem === 1) ? <img src={up}  className=' img-down ms-5'/>  : <img src={down} className=' img-down ms-5' /> }
+          { (openItem === 1) ? <img src={up}  className=' img-down  '/>  : <img src={down} className=' img-down  ' /> }
           </button>
         </div>
         <div className="col-md-8 d-flex align-items-center">

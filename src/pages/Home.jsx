@@ -4,16 +4,22 @@ import Apropos from '../components/Apropos'
 import '../styles/Home.css'
 import Questions from '../components/Questions'
 import About from '../components/About'
-const Home = () => {
+import NavbarPage from '../components/NavbarPage'
+const Home = ({mobileSize,click,setClick}) => {
   return (
- <div>
 
-   <LoginUser />
-   <Apropos />
-   <Questions />
-   <About />
+  
+  <>
+  {mobileSize && click ? <NavbarPage  /> : null}
+        <LoginUser click={click} setClick={setClick} mobileSize={mobileSize}   />
+        <Apropos />
+        <Questions />
+        <About />
+  </>
+ 
+ 
 
- </div>
+ 
  
     
     

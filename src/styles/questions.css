@@ -5,6 +5,9 @@
 .bttn{
      background-color:  transparent;
      border: 0;
+     display: flex;
+     justify-content: space-between !important;
+
 }
 .qst-text1{
     font-size: 28px;
@@ -35,11 +38,14 @@ color: #1389d3;
 .img-down{
     width: 20px;
     height: 20px;
+    margin-right: 2px;
+    align-self: center;
+    border: 1px solid #1389d3;
  
 }
 .img-class{ 
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    /* align-items: flex-end; */
     /* border:solid 1px #641616; */
 }

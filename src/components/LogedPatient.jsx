@@ -5,86 +5,86 @@ import '../styles/LogedPatient.css';
 import download from '../assets/download.png';
 import print from '../assets/print.png';
 
-const LogedPatient = () => {
+const LogedPatient = ({mobileSize,click,setClick}) => {
   return (
-    <div className="container-fluid align-items-center logedPatient mt-4">
-      <div className="row col-12 justify-content-center">
-        <p className='apropos-text1 text-center mt-1 mb-4'>Vos Resultats</p>
-        <div className="col-9 LogedPatient-container d-flex">
-          <table>
+    <div className="container-fluid   mt-4">
+      {/* <div className="row   justify-content-center"> */}
+        <p className='apropos-text1 text-center mt-1 mb-3'>Vos Resultats</p>
+        
+          <table className='col-9 mx-auto'>
             <tbody>
-              <tr className='table-text1'>
+              <tr className='table-text4'>
                 <td>Nom du fichier</td>
                 <td>Date</td>
                 <td>Heure</td>
                 <td>Téléchargement</td>
               </tr>
-              <tr className='table-text2 tr-notReaded'>
+              <tr className='table-text3 tr-notReaded'>
                 <td> Analyse de sang </td>
                 <td>31/07/2023</td>
                 <td>01:00</td>
                 <td className='d-flex justify-content-center'>
-                  <button className='btn col-3 mx-1'>
+                  <button className='btn  mx-1'>
                     <img src={download} alt="Download" className="img-download" />
                   </button>
-                  <button className='btn col-3'>
+                  <button className='btn '>
                     <img src={print} alt="Print" className="img-download" />
                   </button>
                 </td>
               </tr>
 
 
-              <tr className='table-text2 '>
+              <tr className='table-text3 '>
                 <td> Analyse de sang </td>
                 <td>31/07/2023</td>
                 <td>01:00</td>
                 <td className='d-flex justify-content-center'>
-                  <button className='btn col-3 mx-1'>
+                  <button className='btn  mx-1'>
                     <img src={download} alt="Download" className="img-download" />
                   </button>
-                  <button className='btn col-3'>
+                  <button className='btn '>
                     <img src={print} alt="Print" className="img-download" />
                   </button>
                 </td>
               </tr>
 
-              <tr className='table-text2 '>
+              <tr className='table-text3 '>
                 <td> Analyse de sang </td>
                 <td>31/07/2023</td>
                 <td>01:00</td>
                 <td className='d-flex justify-content-center'>
-                  <button className='btn col-3 mx-1'>
+                  <button className='btn   mx-1'>
                     <img src={download} alt="Download" className="img-download" />
                   </button>
-                  <button className='btn col-3'>
+                  <button className='btn  '>
                     <img src={print} alt="Print" className="img-download" />
                   </button>
                 </td>
               </tr>
 
-              <tr className='table-text2 '>
+              <tr className='table-text3 '>
                 <td> Analyse de sang </td>
                 <td>31/07/2023</td>
                 <td>01:00</td>
                 <td className='d-flex justify-content-center'>
-                  <button className='btn col-3 mx-1'>
+                  <button className='btn  mx-1'>
                     <img src={download} alt="Download" className="img-download" />
                   </button>
-                  <button className='btn col-3'>
+                  <button className='btn  '>
                     <img src={print} alt="Print" className="img-download" />
                   </button>
                 </td>
               </tr>
 
-              <tr className='table-text2 '>
+              <tr className='table-text3 '>
                 <td> Analyse de sang </td>
                 <td>31/07/2023</td>
                 <td>01:00</td>
                 <td className='d-flex justify-content-center'>
-                  <button className='btn col-3 mx-1'>
+                  <button className='btn   mx-1'>
                     <img src={download} alt="Download" className="img-download" />
                   </button>
-                  <button className='btn col-3'>
+                  <button className='btn  '>
                     <img src={print} alt="Print" className="img-download" />
                   </button>
                 </td>
@@ -92,8 +92,8 @@ const LogedPatient = () => {
 
             </tbody>
           </table>
-        </div>
-      </div>
+         
+      {/* </div> */}
     </div>
   );
 };

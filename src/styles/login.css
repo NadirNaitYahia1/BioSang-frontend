@@ -45,20 +45,7 @@ border-radius: 5px 5px 5px 5px;
 input{
     display: inline-block;
 }
-.btn{
-    background-color: rgb(67, 119, 164);
-    color: rgb(201, 216, 229);
-    font-size: 19px;
-    font-weight: 600;
-    font-family: 'Open Sans', sans-serif;
-}
-.btn:hover{
-   transition: 1s;
-   background-color: rgb(19, 60, 96);
-   font-family: 'Raleway', sans-serif;
-   color: aliceblue;
-   
-}
+ 
 .link-admin{
     text-decoration: none;
     display: flex;

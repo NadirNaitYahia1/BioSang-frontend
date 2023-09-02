@@ -6,13 +6,17 @@ import About from '../components/About'
 
 const LogedUser = () => {
   return (
-    <div>
-        <LogedPatient />
-        <Apropos />
-        <Questions />
-        <About />
+   
+    <>
+      <LogedPatient />
+      <Apropos />
+      <Questions />
+      <About />
+    </>
+    
+    
 
-    </div>
+     
   )
 }
 

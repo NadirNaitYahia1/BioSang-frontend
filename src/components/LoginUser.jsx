@@ -5,7 +5,7 @@ import admin from '../assets/admin.png';
 import pdf from '../assets/pdf.png';
 import { Link, useNavigate } from 'react-router-dom';
 
-const LoginUser = () => {
+const LoginUser = ({mobileSize,click,setClick}) => {
   const [isAuth, setIsAuth] = useState(false);
   const [data, setData] = useState({
     id_Patient: '',
@@ -53,29 +53,29 @@ const LoginUser = () => {
   }, [isAuth]);
    return (
     <div className="container ">
-      <div className="row col-12  ">
+      <div className="row    ">
 
 
-        <div className="text mt-3 d-flex justify-content-center">
-          <p className='d-flex justify-content login-text1'> Résultats en ligne</p>
+        <div className={mobileSize?"text d-flex justify-content-center":"text mt-3 d-flex justify-content-center"}>
+          <p className='d-flex justify-content login-text1 mt-1'> Résultats en ligne</p>
         </div>
        
-        <div className="login-card col-12 mx-auto  d-flex">
+        <div className={mobileSize  ?"login-card ":"login-card col-12 mx-auto  d-flex"}>
 
-          <div className="pdf  col-md-6    ">
+          <div className="pdf  col-md-6  col-8 d-flex  mx-auto">
              <img src={pdf} alt="" className='pdf-img' />
           </div>
 
-          <div className=" login-parts col-5 ms-4">
+          <div className={mobileSize ?" login-parts col-md-5 col-12 ":" login-parts col-md-5 col-12 ms-4"}>
 
-           <p className='login-text1 mt-2'> Résultats des analyses : </p>
-            <form onSubmit={handleSubmit} className='col-10 ms-5' > 
+           <p className={mobileSize?'login-text1 mt-1':'login-text1 mt-2'}> Résultats des analyses</p>
+            <form onSubmit={handleSubmit} className={mobileSize ?'col-10 mx-auto':'col-10 ms-5'} > 
               
            
-                <label htmlFor="exampleInputEmail1" ><p className='login-text2 '>Id Patient</p></label>
-                <input
+                <label htmlFor="exampleInputEmail1"  ><p className='login-text2 '>Id Patient</p></label>
+                <input 
                   type="text"
-                  className=" form-control form-control-lg "
+                  className=" form-control form-control-lg"
                   id="id_Patient"
          
                   value={data.id_Patient}
@@ -98,12 +98,12 @@ const LoginUser = () => {
 
          
                   
-              <button type="submit" className="submit btn col-10  d-flex mx-auto mt-3    " onClick={handleChange}>
-                <p className='mx-auto'>Télecharger vos résultats</p>
+              <button type="submit" className={mobileSize?"submit btn btn-success d-flex mx-auto mt-3 ":"submit btn btn-success text mt-3 d-flex mx-auto"} onClick={handleChange}>
+                Télecharger vos résultats 
               </button>
              
 
-              <div className="admin d-flex justify-content-end mt-2 mb-4 ">
+              <div className="admin d-flex justify-content-end mt-3 mb-3 ">
                 <img src={admin} alt="" />
                 <Link to='/admin' className='mx-2 link-admin'>Accès partenaire</Link>
               </div>  

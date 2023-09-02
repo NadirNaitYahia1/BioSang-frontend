@@ -1,1 +1,14 @@
- 
+.homeClicked{
+    z-index: 1000;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+} 
+
+
+.homeNav{
+  height: 300px;
+  width: 400px;
+  background-color: rgb(121, 11, 11);
+  z-index: 100000;
+}

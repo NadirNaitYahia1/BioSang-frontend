@@ -9,25 +9,47 @@ import LogedUser from './pages/LogedUser';
 import LogedAdmin from './components/LogedAdmin';
 import AddPatient from './components/AddPatient';
 import PrivateRoutes from './utils/PrivateRotes';
+import NavbarPage from './components/NavbarPage';
 
 const App = () => {
  
+  const [mobileSize, setMobileSize] = useState(window.innerWidth < 992);
+  const [click, setClick] = useState(false)
+
+  const handleResize = () => {
+    setMobileSize(window.innerWidth < 900);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [])
+
+
+  const clicked = () => {
+    setClick(!click)
+  }
+
 
   
   return (
     <div className="App">
       <Router>
-        <Navbar />
+        <Navbar click={click} setClick={setClick} mobileSize={mobileSize} setMobileSize={setMobileSize}/>
         <Routes>
-          
-          <Route element={<PrivateRoutes  />}>
-            <Route path="/login/user" element={<LogedUser />} exact />
+
+          <Route element={<PrivateRoutes    />}>
+            <Route path="/login/user" element={<LogedUser click={click} setClick={setClick} mobileSize={mobileSize} setMobileSize={setMobileSize} />} exact />
             <Route path="/login/admin" element={<LogedAdmin />} exact/>
             <Route path="/addPatient" element={<AddPatient />} exact/>
           </Route>
  
-          <Route path="/" element={<Home />} />
-          <Route path="/admin" element={<LoginAdmin />} />
+          <Route path="/" element={<Home  click={click} setClick={setClick} mobileSize={mobileSize} setMobileSize={setMobileSize}/>} />
+          <Route path="/admin" element={<LoginAdmin  click={click} setClick={setClick} mobileSize={mobileSize} setMobileSize={setMobileSize} />} />
         </Routes>
       </Router>
     </div>
