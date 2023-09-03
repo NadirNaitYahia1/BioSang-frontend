@@ -2,10 +2,17 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/navbar.css'
+import logOut from '../assets/icons/logOut.png'
 
 
-const NavbarWeb = () => {
+const NavbarWeb = ({shouldRender}) => {
 
+  const logout = () => {
+    localStorage.removeItem('token')
+    window.location.reload()
+  }
+
+ 
     const [isClicked, setIsClicked] = useState([true, false, false,false])
 
     const navClick = (index) => {
@@ -60,7 +67,13 @@ const NavbarWeb = () => {
           </Link>
         </li>
 
-
+        {  shouldRender && (
+        <li className='li-item ms-4 'onClick={logout}>
+          <Link className='nav-link' >
+            <img src={logOut} alt="logOut" className='logOut' />
+          </Link>
+        </li>
+      )}
 
     </div>
   )
