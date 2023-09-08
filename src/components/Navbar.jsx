@@ -22,6 +22,8 @@ const Navbar = ({mobileSize,click,setClick}) => {
     }
   }, []);
 
+ 
+
 const clicked = ()=>{
   setClick(!click)
 }

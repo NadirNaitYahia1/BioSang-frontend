@@ -33,8 +33,7 @@ const NavbarWeb = ({shouldRender}) => {
       
   return (
     <div className='navbar-expand-lg d-flex'>
-
-
+  
         
         <li className='li-item  ms-4'  >
           

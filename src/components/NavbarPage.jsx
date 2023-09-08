@@ -13,6 +13,7 @@ const NavbarPage = ({shouldRender,setShouldRender}) => {
   return (
     <div className="container-fluid navbarPage">
         <diV className="row">
+         
         
                 <ul className="navbar-nav ">
                     <li className="nav-item ">

@@ -62,6 +62,7 @@ const LogedPatient = ({mobileSize,click,setClick}) => {
     anchor.href = url;
     anchor.download = 'downloaded.pdf'; // You can customize the file name here
 
+
     // Trigger a click event on the anchor element
     document.body.appendChild(anchor);
     anchor.click();
@@ -75,8 +76,8 @@ const LogedPatient = ({mobileSize,click,setClick}) => {
       const iframe = document.createElement('iframe');
       iframe.style.display = 'none';
       iframe.src = documentUrl;
+
       document.body.appendChild(iframe);
-  
       iframe.onload = () => {
         iframe.contentWindow.print();
    

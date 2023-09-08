@@ -5,7 +5,10 @@ import profil from '../assets/profil.png';
 import '../styles/LogedPatient.css';
 import upload from '../assets/upload.png';
 import yes from '../assets/yes.png';
- ;
+  
+const redirectToAddPatient = () => {
+  window.location.href = '/addPatient'
+}
 const LogedAdmin = () => {
   return (
     <div className="container-fluid  align-items-center   ">
@@ -21,7 +24,7 @@ const LogedAdmin = () => {
 
     <table>
       <tr className='nav'><button class='btn  btn-warning col-12 align-self-center'>Ajouter un document</button></tr>
-      <tr className='nav'><button className='btn btn-warning col-12 align-self-center'>Ajouter un Patient</button></tr>
+      <tr className='nav'><button className='btn btn-warning col-12 align-self-center' onClick={redirectToAddPatient}>Ajouter un Patient</button></tr>
       <tr className='nav mt-4'> <button className='btn btn-blue  col-12 align-self-center'>Patients</button></tr>
       <tr className='nav'><button className='btn btn-blue  col-12 align-self-center'>Admin</button></tr>
       <tr className='nav'><button className='btn btn-blue  col-12 align-self-center'>Questions</button></tr>

@@ -50,6 +50,7 @@ const App = () => {
  
           <Route path="/" element={<Home  click={click} setClick={setClick} mobileSize={mobileSize} setMobileSize={setMobileSize}/>} />
           <Route path="/admin" element={<LoginAdmin  click={click} setClick={setClick} mobileSize={mobileSize} setMobileSize={setMobileSize} />} />
+      
         </Routes>
       </Router>
     </div>
