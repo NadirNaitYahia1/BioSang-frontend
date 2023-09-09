@@ -86,7 +86,7 @@ const LoginUser = ({mobileSize,click,setClick}) => {
 
               <label htmlFor="exampleInputEmail1" className='mt-3'><p className='login-text2 '>Mot De Passe</p></label>
                 <input
-                  type="text"
+                  type="password"
                   className=" form-control form-control-lg"
                   id="password"
                   placeholder="********"

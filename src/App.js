@@ -9,6 +9,9 @@ import LogedUser from './pages/LogedUser';
 import LogedAdmin from './components/LogedAdmin';
 import AddPatient from './components/AddPatient';
 import PrivateRoutes from './utils/PrivateRotes';
+import Patients from './components/Patients';
+import Admins from './components/Admins';
+
 
 
 const App = () => {
@@ -45,6 +48,8 @@ const App = () => {
           <Route element={<PrivateRoutes    />}>
             <Route path="/login/user" element={<LogedUser click={click} setClick={setClick} mobileSize={mobileSize} setMobileSize={setMobileSize} />} exact />
             <Route path="/login/admin" element={<LogedAdmin />} exact/>
+            <Route path="login/patients" element={<Patients />} exact/>
+            <Route path="login/admins" element={<Admins />} exact/>
             <Route path="/addPatient" element={<AddPatient />} exact/>
           </Route>
  
