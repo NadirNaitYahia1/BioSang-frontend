@@ -17,9 +17,11 @@
 }
  
 .nav-side{
- 
+    
+    /* position: sticky; */
     background-color: #d2e6f8;
-    height: 90vh;
+    height: 100vh;
+    box-shadow: 1px 1px 1px rgba(164, 217, 241, 0.342);
 }
 .nav{
     background-color: #d2e6f8;

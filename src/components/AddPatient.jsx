@@ -69,9 +69,11 @@ const AddPatient = () => {
 
 
   return (
-<div className="container">
-<div className="row col-12">
  
+ 
+  <div className="col-7 mt-5  mx-auto">
+
+
 
     <p className='text-center apropos-text1 mt-3'>Ajouter un Patient</p>
     <div className="col-12 mt-3">
@@ -105,8 +107,8 @@ const AddPatient = () => {
               </div>
         </form>
     </div>
-</div>
-</div>
+ 
+    </div>
   )
 }
 

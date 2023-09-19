@@ -30,6 +30,11 @@ const LogedPatient = ({mobileSize,click,setClick}) => {
   
       if (!response.ok) {
         // Handle the case where the request was not successful
+        if(response.status === 400){
+          console.log('Bad request');
+          window.location.href = '/';
+          return;
+        }
         console.error('Request failed with status:', response.status);
         return;
       }
