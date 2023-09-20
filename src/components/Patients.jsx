@@ -119,17 +119,19 @@ const Patients = () => {
               ))} */}
 
 
-{Object.values(data).map((item, index) =>( 
-  
-        <tr key={index}>
-          <td>{item.id_Patient}</td>
-          <td>{item.name}</td>
-          <td>{item.prenom}</td>
-          <td>{item.date_naissance}</td>
-        </tr>
-      
-     
-      ))}
+{Object.values(data)
+  .sort((a, b) => a.id_Patient - b.id_Patient)
+  .map((item, index) => (
+    <tr key={index}>
+      <td>{item.id_Patient}</td>
+      <td>{item.name}</td>
+      <td>{item.prenom}</td>
+      <td>{item.date_naissance}</td>
+    </tr>
+  ))}
+
+
+
             </tbody>
           </table>
         </div>

@@ -164,6 +164,8 @@ const fileData = (id_patient) => {
     <div className="col-9 justify-content-center mt-5">
     <p className='apropos-text1 text-center mt-1 mb-4'>Ajouter les Analyses</p>
     <div className="justify-content-center LogedPatient-container d-flex">
+    <div className="mb-2 bg-light border-right vh-100" id="sidebar-wrapper">
+        <div class="list-group list-group-flush overflow-auto h-100 ">
       <table>
         <thead>
           <tr className='table-text1'>
@@ -174,20 +176,24 @@ const fileData = (id_patient) => {
           </tr>
         </thead>
         <tbody>
-          {Object.values(analyses).map((analyse, index) => (
+        {Object.values(analyses)
+          .sort((a, b) => new Date(a.date) - new Date(b.date)) // Sort by date
+          .map((analyse, index) => (
             <tr key={index} className='table-text2'>
               <td>{analyse.id_analyse}</td>
               <td>{analyse.patient_id}</td>
               <td>{analyse.date}</td>
               <td className='d-flex justify-content-center'>
                 <input type="file" onChange={onFileChange} />
-                <button className='btn btn-blue' onClick={()=>onFileUpload(analyse)}>Upload!</button>
-                { fileData(analyse.patient_id)}  
+                <button className='btn btn-blue' onClick={() => onFileUpload(analyse)}>Upload!</button>
+                {fileData(analyse.patient_id)}
               </td>
             </tr>
           ))}
-        </tbody>
+      </tbody>
       </table>
+    </div>
+    </div>
     </div>
   </div>
 

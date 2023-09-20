@@ -53,12 +53,15 @@ const Admins = () => {
               </tr>
             </thead>
             <tbody>
-              {Object.values(data).map((item,index) => (
-                <tr key={index} >
-                  <td>{item.id_Admin}</td>
-                  <td>{item.name}</td>
-                </tr>
-              ))}
+            {Object.values(data)
+            .sort((a, b) => a.id_Admin - b.id_Admin)
+            .map((item, index) => (
+              <tr key={index}>
+                <td>{item.id_Admin}</td>
+                <td>{item.name}</td>
+              </tr>
+            ))}
+
             </tbody>
           </table>
         </div>
