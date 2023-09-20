@@ -60,7 +60,7 @@ const App = () => {
             <Route path="/login/user" element={<LogedUser click={click} setClick={setClick} mobileSize={mobileSize} setMobileSize={setMobileSize} />} exact />
             <Route path="login/patients" element={<Patients />} exact/>
             
-            <Route path="/addPatient" element={<AddPatientPage />} exact/>
+            <Route path="addPatient" element={<AddPatientPage />} exact/>
             <Route path="/login/admin" element={<Admin />} exact/>
             <Route path="login/admins" element={<Admins />} exact/>
           </Route>

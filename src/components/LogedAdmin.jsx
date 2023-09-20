@@ -14,6 +14,7 @@ const LogedAdmin = () => {
     img: '',});
 
 
+    const [selectedRows, setSelectedRows] = useState([]);
 
 
     
@@ -104,7 +105,9 @@ const fetchUpload = async () => {
 
 
 const onFileUpload = (analyse) => {
-  
+
+   
+  setSelectedRows([...selectedRows, analyse.patient_id]);
   try{
  
     formData.append("file", state.selectedFile);
@@ -127,36 +130,29 @@ const onFileUpload = (analyse) => {
 };
 
 
+const fileData = (id_patient) => {
+  console.log('id:', id_patient);
 
-
-
- 
-const fileData = () => {
-
-    if (state.selectedFile) {
-
-        return (
-            <div>
-                <h5>File Details:</h5>
-                <p>File Name: {state.selectedFile.name}</p>
-
-                <p>File Type: {state.selectedFile.type}</p>
-
-                <p>
-                    Last Modified:{" "}
-                    {state.selectedFile.lastModifiedDate.toDateString()}
-                </p>
-
-            </div>
-        );
-    } else {
-        return (
-            <div>
-                <br />
-                <h4>Choose before Pressing the Upload button</h4>
-            </div>
-        );
-    }
+  if (state.selectedFile && selectedRows.includes(id_patient)) {
+    return (
+      <div>
+        <h5>File Details:</h5>
+        <p>File Name: {state.selectedFile.name}</p>
+        <p>File Type: {state.selectedFile.type}</p>
+        <p>
+          Last Modified:{" "}
+          {state.selectedFile.lastModifiedDate.toDateString()}
+        </p>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <br />
+        <h4>Choose before Pressing the Upload button</h4>
+      </div>
+    );
+  }
 };
 
    
@@ -186,7 +182,7 @@ const fileData = () => {
               <td className='d-flex justify-content-center'>
                 <input type="file" onChange={onFileChange} />
                 <button className='btn btn-blue' onClick={()=>onFileUpload(analyse)}>Upload!</button>
-                { fileData(index)}  
+                { fileData(analyse.patient_id)}  
               </td>
             </tr>
           ))}

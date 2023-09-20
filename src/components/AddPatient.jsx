@@ -37,7 +37,7 @@ const AddPatient = () => {
           // Clear the input fields after successful addition
           setName(content.name)
           setData({
-            id_Patient: '',
+            id_Patient: 100,
             name: '',
             prenom: '',
             date_naissance: '',
